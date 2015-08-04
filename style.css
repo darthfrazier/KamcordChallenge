@@ -1,0 +1,318 @@
+@font-face {
+	font-family: websymbols;
+	src: url("http://thecodeplayer.com/uploads/fonts/websymbols.eot");
+	src: url('http://thecodeplayer.com/uploads/fonts/websymbols.eot?#iefix') format('embedded-opentype'),
+     url('http://thecodeplayer.com/uploads/fonts/websymbols.woff') format('woff'),
+     url('http://thecodeplayer.com/uploads/fonts/websymbols.ttf') format('truetype'),
+	 url('http://thecodeplayer.com/uploads/fonts/websymbols.svg#WebSymbolsRegular') format('svg');
+}
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #EEE;
+	font: 10px/13px 'Lucida Sans',sans-serif;
+}
+.wrap {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.box {
+	display: inline-block;
+	width: 25%;
+	padding: 1%;
+	postion: relative;
+	
+}
+.boxInner, .thumbnail-overlay {
+	display: inline-block;
+	position: relative;
+	margin: 5px;
+	width: 100%;
+	height: 33%;
+	
+}
+
+	.boxInner .thumbnail {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: block;
+		overflow: hidden;
+		box-shadow: 0px 1px 6px;
+
+	}
+	
+		.boxInner .thumbnail .time {
+			position: absolute;
+			display: inline-block;
+			right: 2px;
+			bottom: 2px;
+			opacity: .75;
+			filter: alpha(opacity=75);
+			background: #000;
+			color: #fff;
+			font-size: 11px;
+			line-height: 11px;
+			font-weight: bold;
+			padding: 2px 5px;
+			border-radius: 2px;
+		}
+
+.boxInner:hover .thumbnail-overlay {
+	opacity: 1;
+}
+
+.boxInner:hover .likes {
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.boxInner:hover .likesl {
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.boxInner:hover .likesc {
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.boxInner:hover img {
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.thumbnail-overlay {
+	z-index: 10; 
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	margin: 0;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	/*Hover effect - default state*/
+	opacity: 0;
+	transition: all 0.5s;
+} 
+
+	.thumbnail-overlay .likes {
+		color: #fff;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		padding-top: 70px;
+		position: absolute;
+		text-transform: uppercase;
+		font-size: 14px;
+		text-align: center;
+		text
+		/*Vertical center align*/
+		vertical-align: middle;
+		/*Hover effect - default state*/
+		-ms-transform: scale(.2);
+		-webkit-transform: scale(.2);
+		transform: scale(0.2);
+		transition: all 0.25s;
+	}
+
+		.thumbnail-overlay .likes .hidden {
+			display: none;
+		}
+
+	.thumbnail-overlay .likesl {
+		float:left;
+		color: #54BE9D;
+		font-size: 14px;
+		margin: 4px;
+		-ms-transform: scale(.2);
+		-webkit-transform: scale(.2);
+		transform: scale(0.2);
+		transition: all 0.25s;
+	}
+		.thumbnail-overlay .likesl::before {
+			content: 'O';
+			font-family: websymbols;
+			font-size: 14px
+			color: #54BE9D;
+			margin: 3px;
+			display: block;
+			float: left;
+		}
+
+	.thumbnail-overlay .likesc {
+		float:right;
+		color: #54BE9D;
+		font-size: 14px;
+		margin: 4px;
+		-ms-transform: scale(.2);
+		-webkit-transform: scale(.2);
+		transform: scale(0.2);
+		transition: all 0.25s;
+	}
+		.thumbnail-overlay .likesc::before {
+			content: 'c';
+			font-family: websymbols;
+			font-size: 14px;
+			color: #54BE9D;
+			margin: 3px;
+			display: block;
+			float: right;
+		}
+
+		.thumbnail-overlay .likes::before {
+			content: ']';
+			font-family: websymbols;
+			font-size: 80px;
+			color: #54BE9D;
+			opacity: 0.5;
+			display: block;
+			line-height: 36px;
+			cursor: pointer;
+		}
+
+	.boxInner .info {
+		display: block;
+		width: 100%;
+		height: 53px;
+		box-shadow:  0px 0px 6px;
+	}
+
+		.boxInner .info h3 {
+			font-size: 13px;
+			color: #54BE9D;
+			line-height: 16px;
+			margin: 0;
+			text-align: left;
+			padding-top: 10px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+
+
+		.boxInner .info .icon {
+			border: solid 1.5px black;
+			border-radius: 3px;
+			height: 40px;
+			width: 40px;
+			margin: 5px;
+			float: left;
+		}
+
+		.boxInner .info .sub-info {
+			display: block;
+			font-size: 11px;
+			color: #999;
+			float: left;
+			
+		}
+
+	.boxInner img {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		transition: all 0.25s;
+
+	}
+	
+	.boxInner .titleBox {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-bottom: -50px;
+		background: #000;
+		background: rgba(0, 0, 0, 0.5);
+		color: #FFF;
+		padding: 10px;
+		text-align: center;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+
+	.boxInner .titleBox2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-top: -50px;
+		background: #000;
+		background: rgba(0, 0, 0, 0.5);
+		color: #FFF;
+		padding: 10px;
+		text-align: center;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+
+
+body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+	margin-bottom: 0;
+}
+
+body.no-touch .boxInner:hover .titleBox2 {
+	margin-top: 0;
+}
+
+#simpleModal {
+    position:fixed;
+    display: none;
+    z-index:1002;
+    overflow:auto;
+    max-width:80vw;
+    height:80vh;
+    margin: auto;
+    -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.25); 
+    -webkit-transition: opacity 0.0s ease-out; z-index: 0;
+}
+
+#simpleModal.show {
+	opacity: 1.0; 
+    z-index: 100; 
+    display: inline-block;       
+    -webkit-transition-duration: 0.25s;
+}
+
+@media only screen and (max-width : 480px) {
+	
+	.box {
+		width: 100%;
+		
+	}
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+	
+	.box {
+		width: 50%;
+		
+	}
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+	
+	.box {
+		width: 33.3%;
+	}
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+	
+	.box {
+		width: 25%;
+		
+	}
+}
